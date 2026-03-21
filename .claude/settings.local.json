@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/rnmgy/dev/moneyplanner/**)",
+      "Bash(ls /c/Users/rnmgy/dev/moneyplanner/app/\\\\\\(tabs\\\\\\)/)",
+      "Bash(npx expo:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(echo \"exit: $?\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls /c/Users/rnmgy/dev/moneyplanner/node_modules/.bin/expo*)",
+      "Bash(ipconfig)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"console.log\\(require\\(''./node_modules/expo/package.json''\\).version\\)\")",
+      "Bash(node -e \"const p = require\\(''./node_modules/expo/package.json''\\); console.log\\(JSON.stringify\\(p.peerDependencies, null, 2\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); keys=[''''react-native'''',''''expo-router'''',''''expo-sqlite'''',''''expo-file-system'''',''''expo-sharing'''',''''react-native-reanimated'''',''''react-native-screens'''',''''react-native-safe-area-context'''',''''expo-font'''',''''expo-haptics'''']; [print\\(k,d[k]\\) for k in keys if k in d]\")",
+      "Bash(node -e \"const d=require\\(''''./node_modules/expo/bundledNativeModules.json''''\\); [''''react-native'''',''''expo-router'''',''''expo-sqlite'''',''''expo-file-system'''',''''expo-sharing'''',''''react-native-reanimated'''',''''react-native-screens'''',''''react-native-safe-area-context''''].forEach\\(k=>d[k]&&console.log\\(k,d[k]\\)\\)\")",
+      "Bash(node -e \"const d=require\\(''./node_modules/expo/bundledNativeModules.json''\\); [''expo-font'',''expo-haptics'',''expo-image'',''expo-linking'',''expo-splash-screen'',''expo-status-bar'',''expo-symbols'',''expo-system-ui'',''expo-web-browser'',''react-native-gesture-handler'',''react-native-web'',''react-native-webview'',''react'',''react-native''].forEach\\(k=>d[k]&&console.log\\(k,d[k]\\)\\)\")",
+      "Bash(node -e \"const fs = require\\(''./node_modules/expo-file-system/build/index''\\); console.log\\(Object.keys\\(fs\\).slice\\(0,20\\)\\)\")",
+      "Bash(node -e \"const d=require\\(''./node_modules/expo/bundledNativeModules.json''\\); const k=Object.keys\\(d\\).filter\\(k=>k.includes\\(''worklet''\\)\\); k.forEach\\(k=>console.log\\(k,d[k]\\)\\)\")",
+      "Bash(gh auth:*)",
+      "Bash(gh api:*)",
+      "WebSearch"
+    ]
+  }
+}

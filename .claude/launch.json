@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Expo (iOS)",
+      "runtimeExecutable": "C:/Program Files/nodejs/node.exe",
+      "runtimeArgs": ["C:/Users/rnmgy/dev/moneyplanner/node_modules/expo/bin/cli", "start", "C:/Users/rnmgy/dev/moneyplanner"],
+      "port": 8081
+    }
+  ]
+}
