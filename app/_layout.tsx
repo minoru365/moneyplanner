@@ -3,7 +3,6 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
-import { useFonts } from "expo-font";
 import { Stack, router, useSegments, type Href } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useRef, useState } from "react";
@@ -32,9 +31,6 @@ export default function RootLayout() {
 
 function RootLayoutContent() {
   const { colors } = useAppTheme();
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-  });
   const { user, loading: authLoading } = useAuth();
   const userId = user?.uid;
   const [appCheckReady, setAppCheckReady] = useState(false);
@@ -88,7 +84,7 @@ function RootLayoutContent() {
       shortRetryTimers.clear();
     };
 
-    if (authLoading || !loaded || !appCheckReady) {
+    if (authLoading || !appCheckReady) {
       return () => {
         cancelled = true;
         clearTimers();
@@ -186,10 +182,10 @@ function RootLayoutContent() {
       cancelled = true;
       clearTimers();
     };
-  }, [userId, authLoading, loaded, appCheckReady, startupRetryEpoch]);
+  }, [userId, authLoading, appCheckReady, startupRetryEpoch]);
 
   useEffect(() => {
-    if (authLoading || !loaded || !appCheckReady) return;
+    if (authLoading || !appCheckReady) return;
 
     const firstSegment = segments[0] as string | undefined;
     if (!user) {
@@ -207,7 +203,6 @@ function RootLayoutContent() {
   }, [
     appCheckReady,
     authLoading,
-    loaded,
     resolvedHouseholdId,
     resolvedUserId,
     segments,
@@ -220,7 +215,7 @@ function RootLayoutContent() {
     setStartupRetryEpoch((value) => value + 1);
   };
 
-  if (!loaded || authLoading || !appCheckReady) {
+  if (authLoading || !appCheckReady) {
     return null;
   }
 
