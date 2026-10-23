@@ -3,6 +3,7 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
+    "test:dependencies": "node --test scripts/security-dependencies.test.cjs",
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
@@ -23,7 +24,7 @@
     "@react-navigation/elements": "^2.3.8",
     "@react-navigation/native": "^7.1.6",
     "encoding-japanese": "^2.2.0",
-    "expo": "~54.0.35",
+    "expo": "~54.0.38",
     "expo-apple-authentication": "~8.0.8",
     "expo-blur": "~15.0.8",
     "expo-build-properties": "~1.0.10",
@@ -65,8 +66,29 @@
     "eslint-config-expo": "~10.0.0",
     "firebase": "^12.12.1",
     "firebase-tools": "^15.15.0",
-    "tsx": "^4.21.0",
+    "tsx": "^4.23.15",
     "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "expo-router": "$expo-router",
+    "@expo/metro-config": {
+      "postcss": "8.5.31"
+    },
+    "metro": {
+      "image-size": "2.0.4"
+    },
+    "@firebase/firestore": {
+      "@grpc/grpc-js": "1.14.6"
+    },
+    "@google-cloud/pubsub": {
+      "@opentelemetry/core": "2.8.0"
+    },
+    "gaxios": {
+      "uuid": "11.1.1"
+    },
+    "express": {
+      "qs": "6.16.1"
+    }
   },
   "private": true
 }
