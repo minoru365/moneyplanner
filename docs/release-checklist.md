@@ -40,6 +40,11 @@ React Native Firebaseの実動作確認はExpo GoやWebでは行わず、TestFli
 
 ### 事前確認
 
+0. App Store Connectの最新の承認済みバージョンを確認し、`app.json` の
+   `expo.version` がそれより高いことを確認する。`expo config --type public`
+   の解決結果も照合する。buildNumberだけ増やして承認済みと同じ版を送ると、
+   ITMS-90186 / ITMS-90062で拒否される。EAS submit成功はアップロード完了であり、
+   Apple側の処理完了・TestFlight利用可能の確認とは区別する。
 1. 変更内容に応じて [PLAN.md](../PLAN.md) と [docs/testflight-history.md](testflight-history.md) の更新要否を確認する
 2. Firestore Security Rulesを変更した場合は、先に `npm run test:rules` を実行し、必要なら `npx firebase deploy --only firestore:rules` で反映する
 3. 通常のビルド前チェックを実行する

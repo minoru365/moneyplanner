@@ -61,6 +61,8 @@
 
 - [x] 画面で使われていないSpaceMonoフォントの読み込み待ちをRootから除去。
   認証・App Check・世帯判定・Firestore初期化の待機と再試行は維持する。
+- [x] `1.0.5 (46)` をTestFlightへ送信し、Appleの利用可能通知を確認（2026-10-25）。
+  詳細は [TestFlight履歴](docs/testflight-history.md#build-46バージョン105production) を参照。
 - [ ] 同じiPhoneで完全終了後の起動と復帰を比較し、体感差を確認する。
   実測前のため改善時間は未確定。詳細は
   [初回表示レイテンシ](docs/decisions/initial-render-latency-version-check.md#2026-10-24-未使用フォントの起動待機を除去) を参照。

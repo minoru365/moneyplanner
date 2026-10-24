@@ -67,3 +67,13 @@ Corrected cloud build 1.0.4 (45), ID 0aa80d9d-4a16-45f3-8c4a-41f4ccee5913,
 passed all 18 Expo doctor checks and built successfully. Because 1.0.4 was already
 approved, the next upload uses marketing version 1.0.5 to avoid Apple's closed
 release-train rejection observed on the companion app. Application code is unchanged.
+Apple also subsequently rejected 1.0.4 (45) with ITMS-90186 / ITMS-90062;
+the replacement build is 1.0.5 (46), not a resubmission of the old binary.
+
+## Release result (confirmed 2026-10-25)
+
+1.0.5 (46), commit aadbbef, build 5813e6f5-c47e-4386-b3ed-eba1d8a825df,
+completed successfully. Submission 3a180849-94c0-46ed-970d-9f358f2ce0fc uploaded
+successfully. Apple's 2026-10-24 TestFlight notification confirms this exact version
+is available to test. Device cold-start/native behavior remains to be checked.
+No public App Store release was performed.
