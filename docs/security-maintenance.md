@@ -62,3 +62,8 @@ dependency lifecycle scripts) succeeded. All 8 dependency tests passed; full sui
 364 pass / 45 skip, lint, tsc and Expo install check passed. Full iOS export including
 unmatched.png passed. All 14 Metro packages resolve to 0.83.8 and image-size is absent.
 Audit remains 9H/3M. No generated export or node_modules files are tracked.
+
+Corrected cloud build 1.0.4 (45), ID 0aa80d9d-4a16-45f3-8c4a-41f4ccee5913,
+passed all 18 Expo doctor checks and built successfully. Because 1.0.4 was already
+approved, the next upload uses marketing version 1.0.5 to avoid Apple's closed
+release-train rejection observed on the companion app. Application code is unchanged.
