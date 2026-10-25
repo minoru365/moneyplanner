@@ -77,3 +77,21 @@ completed successfully. Submission 3a180849-94c0-46ed-970d-9f358f2ce0fc uploaded
 successfully. Apple's 2026-10-24 TestFlight notification confirms this exact version
 is available to test. Device cold-start/native behavior remains to be checked.
 No public App Store release was performed.
+
+## Brotli build-runtime correction — 2026-10-25
+
+Prior EAS builds used Node20.19.4 from the default image. All three existing
+profiles (development, preview, production) now explicitly select22.23.4;
+the Pages workflow also selects22.23.4 instead of cached major22. This fixes
+CVE-2026-111497 for subsequent build hosts per the
+[Node security release](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases).
+EAS configuration is resolved locally; confirm the Node version in the next
+authorized cloud build log. No new iOS build or submission is performed solely
+for this configuration change. The build-host Node binary is not packaged into
+the Hermes app. Build46 and app version1.0.5 are unchanged, as are dependencies,
+credentials, native app settings and application data. Maintain the pin deliberately.
+
+Local validation: official installed EAS schema/accessor resolved all three
+profiles to22.23.4 on both platforms. YAML parsed, exact baseline comparison
+allowed only the3 EAS node fields and Pages Node selection, and Pages validation
+passed. No dependency install or application code change was needed.
